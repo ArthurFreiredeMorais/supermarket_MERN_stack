@@ -9,11 +9,9 @@ import {
   getOrders,
 } from '../controllers/orderController.js';
 import { protect, employee } from '../middleware/authMiddleware.js';
-
 router.route('/').post(protect, addOrderItems).get(protect, employee, getOrders);
 router.route('/mine').get(protect, getMyOrders);
 router.route('/:id').get(protect, getOrderById);
 router.route('/:id/pay').put(protect, updateOrderToPaid);
 router.route('/:id/deliver').put(protect, employee, updateOrderToDelivered);
-
 export default router;
