@@ -8,11 +8,13 @@ import {
   updateProduct,
   deleteProduct,
   createProductReview,
+  getTopProducts,
 } from '../controllers/productController.js';
 import { protect, employee } from '../middleware/authMiddleware.js';
 
 router.route('/').get(getProducts).post(protect, employee, createProduct);
 router.route('/:id/reviews').post(protect, createProductReview);
+router.get('/top', getTopProducts);
 router
   .route('/:id')
   .get(getProductById)
