@@ -68,6 +68,7 @@ const Header = () => {
                 </LinkContainer>
               )}
 
+              {/* Employee Links */}
               {userInfo && userInfo.isEmployee && (
                 <NavDropdown title="Employee" id="Employeemenu">
                   <LinkContainer to="/employee/productlist">
@@ -75,6 +76,9 @@ const Header = () => {
                   </LinkContainer>
                   <LinkContainer to="/employee/orderlist">
                     <NavDropdown.Item>Orders</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/employee/userlist'>
+                    <NavDropdown.Item>Users</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
               )}
