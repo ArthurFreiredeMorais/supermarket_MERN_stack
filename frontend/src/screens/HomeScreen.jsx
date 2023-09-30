@@ -7,6 +7,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import Paginate from "../components/Paginate";
 import ProductCarousel from "../components/ProductCarousel";
+import Meta from '../components/Meta';
 
 // Define the HomeScreen component
 const HomeScreen = () => {
@@ -37,6 +38,7 @@ const HomeScreen = () => {
         <>
           {" "}
           {/* Display product data if there are no errors */}
+          <Meta />
           <h1>Latest Products</h1>
           <Row>
             {data.products.map((product) => (
