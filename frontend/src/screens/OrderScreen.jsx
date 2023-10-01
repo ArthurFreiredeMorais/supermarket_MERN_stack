@@ -25,7 +25,8 @@ const OrderScreen = () => {
 
   const [payOrder, { isLoading: loadingPay }] = usePayOrderMutation();
 
-  const [deliverOrder, { isLoading: loadingDeliver }] = useDeliverOrderMutation();
+  const [deliverOrder, { isLoading: loadingDeliver }] =
+    useDeliverOrderMutation();
 
   const { userInfo } = useSelector((state) => state.auth);
 
@@ -69,6 +70,7 @@ const OrderScreen = () => {
     });
   }
 
+  // TESTING ONLY! REMOVE BEFORE PRODUCTION
   async function onApproveTest() {
     await payOrder({ orderId, details: { payer: {} } });
     refetch();
@@ -102,7 +104,7 @@ const OrderScreen = () => {
   return isLoading ? (
     <Loader />
   ) : error ? (
-    <Message variant='danger'>{error}</Message>
+    <Message variant='danger'>{error.data.message}</Message>
   ) : (
     <>
       <h1>Order {order._id}</h1>
@@ -132,6 +134,7 @@ const OrderScreen = () => {
                 <Message variant='danger'>Not Delivered</Message>
               )}
             </ListGroup.Item>
+
             <ListGroup.Item>
               <h2>Payment Method</h2>
               <p>
@@ -144,6 +147,7 @@ const OrderScreen = () => {
                 <Message variant='danger'>Not Paid</Message>
               )}
             </ListGroup.Item>
+
             <ListGroup.Item>
               <h2>Order Items</h2>
               {order.orderItems.length === 0 ? (
@@ -207,7 +211,6 @@ const OrderScreen = () => {
                   <Col>${order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
-
               {!order.isPaid && (
                 <ListGroup.Item>
                   {loadingPay && <Loader />}
@@ -216,6 +219,7 @@ const OrderScreen = () => {
                     <Loader />
                   ) : (
                     <div>
+                      {/* THIS BUTTON IS FOR TESTING! REMOVE BEFORE PRODUCTION! */}
                       <Button
                         style={{ marginBottom: '10px' }}
                         onClick={onApproveTest}
@@ -234,8 +238,7 @@ const OrderScreen = () => {
                   )}
                 </ListGroup.Item>
               )}
-              {/* {MARK AS DELIVERED PLACEHOLDER} */}
-              
+
               {loadingDeliver && <Loader />}
 
               {userInfo &&
@@ -259,4 +262,5 @@ const OrderScreen = () => {
     </>
   );
 };
+
 export default OrderScreen;
