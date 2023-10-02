@@ -11,6 +11,7 @@ export const productsApiSlice = apiSlice.injectEndpoints({
         params: { keyword, pageNumber },
       }),
       keepUnusedDataFor: 5, // Keep the data in the cache for 5 secs
+      providesTags: ['Products'],
     }),
     // Define a query endpoint to fetch product details based on productId
     getProductDetails: builder.query({
