@@ -42,7 +42,7 @@ const getProductById = asyncHandler(async (req, res) => {
 // @access  Private/Employee
 const createProduct = asyncHandler(async (req, res) => {
   const product = new Product({
-    name: 'Sample name',
+    name: 'Sample name, Update the Product as you wish',
     price: 0,
     user: req.user._id,
     image: '/images/sample.jpg',
