@@ -2,13 +2,15 @@
 Application of a supermarket using the MERN stack for University Project
 
 # Features
+-  CRUD Users user/employee with Authentication and Middleware 
+-  CRUD Products to employees
+-  Password Encriptation in database for security
 -  Full featured shopping cart
 -  Product reviews and ratings
 -  Top products carousel
 -  Product pagination
 -  Product search feature
 -  User profile with orders
--  Employee product management
 -  Employee user management
 -  Employee Order details page
 -  Mark orders as delivered option
