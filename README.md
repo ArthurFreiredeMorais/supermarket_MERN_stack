@@ -2,8 +2,7 @@
 Application of a supermarket using the MERN stack for University Project
 
 # Features
--  Important to mention that the code is organized in folders with some comments in function on backend
--  CRUD Users user/employee with Authentication and Middleware 
+-  CRUD Users user/employee with Authentication and Middleware using JSON Web Token
 -  CRUD Products to employees
 -  Password Encriptation in database for security
 -  Full featured shopping cart
@@ -18,6 +17,8 @@ Application of a supermarket using the MERN stack for University Project
 -  Checkout process (shipping, payment method, etc)
 -  PayPal / credit card integration
 -  Database seeder (products & users)
+
+-  Important to mention that the code is organized in folders with some comments in function on backend
 
 ### Run
 
