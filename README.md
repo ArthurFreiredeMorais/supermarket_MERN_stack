@@ -18,7 +18,7 @@ Application of a supermarket using the MERN stack for University Project
 -  PayPal / credit card integration
 -  Database seeder (products & users)
 
--  Important to mention that the code is organized in folders with some comments in function on backend
+-  Important to mention that the code is organized in folders with some comments onto the functions on backend
 
 ### Run
 
