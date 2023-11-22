@@ -1,4 +1,8 @@
 # supermarket_MERN_stack
+
+Website link
+https://supermarket-z9r7.onrender.com
+
 Application of a supermarket using the MERN stack for University Project
 
 # Features
@@ -20,6 +24,16 @@ Application of a supermarket using the MERN stack for University Project
 
 -  Important to mention that the code is organized in folders with some comments onto the functions on backend
 
+### Install Project
+
+```
+npm install - install dependencies of the root folder /supermarket_MERN_stack
+
+cd frontend - access the frontend folder
+
+npm install - instal dependencies inside the folder /frontend
+```
+
 ### Run
 
 ```
@@ -31,7 +45,7 @@ npm run dev
 npm run server
 ```
 
-# Create frontend production build
+### Create frontend production build
 ```
 cd frontend
 npm run build
